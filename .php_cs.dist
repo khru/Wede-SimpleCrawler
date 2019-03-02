@@ -1,0 +1,15 @@
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->exclude('vendor')
+    ->in(__DIR__);
+
+return PhpCsFixer\Config::create()
+    ->setIndent('  ')
+    ->setRules([
+        '@Symfony' => true,
+        'full_opening_tag' => false,
+        'indentation_type' => false,
+        'concat_space' => ['spacing' => 'one'],
+    ])
+    ->setFinder($finder);

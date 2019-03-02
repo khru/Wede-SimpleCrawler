@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  php:
+    image: php:7-alpine
+    volumes:
+      - ./:/code
+    working_dir: /code
+    entrypoint: php
